@@ -307,7 +307,7 @@ a.btn-text:hover {
 }
 .product-box li {
   margin-left: 2em;
-  list-style-type: lower-roman;
+  list-style-type: square;
 }
 .product-box h3 {
 	color: #fff;
