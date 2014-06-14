@@ -1080,3 +1080,9 @@ a.btn-text {
 	border-bottom-left-radius: 6px;
 }
 }
+.selected-plan {
+	opacity: 1.0;
+}
+.other-plan {
+	opacity: 0.5;
+}

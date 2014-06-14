@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Subscribe to Creationix School of Innovation</title>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!--[if lte IE 7]><script src="js/lte-ie7.js"></script><![endif]-->
+  <!-- Mobile Specific Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/form.css">
+  <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+</head>
+<body>
+
+<div class="price_table-bg" id="plans">
+  <div class="row price_table">
+    <div class="row">
+      <div class="table grid_4" id="plan-basic">
+        <h4 class="table-1">basic</h4>
+        <div class="price"><sup>$</sup>9</div>
+        <div class="option">per month</div>
+        <p>As a basic member you will get full access to all past, current, and future premium content.  The more people that sign up, the more time I'll have to make new content. Tell your friends!</p>
+        <ul class="table-1">
+          <li>Unlimited Access to Premium Content</li>
+        </ul>
+        <div class="action-button"><a href="#basic">Select</a></div>
+      </div>
+      <div class="table grid_4" id="plan-ultimate">
+        <h4 class="table-3">ultimate</h4>
+        <div class="price"><sup>$</sup>29</div>
+        <div class="option">per month</div>
+        <p>As an ultimate member you are serious about learning.  You get all content and up to five live sites.</p>
+        <ul class="table-3">
+          <li>Unlimited Access to Premium Content</li>
+          <li>Five Hosted Tedit Platform Sites</li>
+          <li>Limited Email Support</li>
+        </ul>
+        <div class="action-button"><a href="#ultimate">Select</a></div>
+      </div>
+      <div class="table grid_4" id="plan-advanced">
+        <h4 class="table-2">advanced</h4>
+        <div class="price"><sup>$</sup>19</div>
+        <div class="option">per month</div>
+        <p>As an advanced member, you'll also get all premium content and I'll throw in two hosted tedit sites.</p>
+        <ul class="table-2">
+          <li>Unlimited Access to Premium Content</li>
+          <li>Two Hosted Tedit Platform sites</li>
+          <li>Limited Email Support</li>
+        </ul>
+        <div class="action-button"><a href="#advanced">Select</a></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="row payment-form">
+    <form action="" method="POST" id="payment-form">
+      <article class="grid_6">
+        <fieldset>
+          <label for="name-field">Your Name</label>
+          <input type="text" required name="name" id="name-field">
+        </fieldset>
+        <fieldset>
+          <label for="email-field">Email for Account</label>
+          <input type="email" required name="email" id="email-field">
+        </fieldset>
+        <fieldset>
+          <label for="comments-field">Comments</label>
+          <textarea name="comments" id="comments-field"></textarea>
+        </fieldset>
+        <fieldset>
+          <label for="radio">Chosen Plan</label>
+          <div class="radio">
+            <span>
+              <input type="radio" name="plan" value="basic" id="plan-basic-radio" required>
+              <label for="plan-basic-radio"><span></span>Basic Subscription</label>
+            </span>
+            <span>
+              <input type="radio" name="plan" id="plan-advanced-radio">
+              <label for="plan-advanced-radio"><span></span>Advanced Subscription</label>
+            </span>
+            <span>
+              <input type="radio" name="plan" id="plan-ultimate-radio">
+              <label for="plan-ultimate-radio"><span></span>Ultimate Subscription</label>
+            </span>
+          </div>
+        </fieldset>
+      </article>
+      <article class="grid_6">
+        <span class="payment-errors"></span>
+        <fieldset>
+          <label for="number-field">Card Number</label>
+          <input type="text" size="20" data-stripe="number" id="number-field" required>
+        <fieldset>
+        </fieldset>
+          <label for="cvc-field">CVC</label>
+          <input type="text" size="4" data-stripe="cvc" id="cvc-field" required>
+        </fieldset>
+        <fieldset>
+          <label for="month-field">Month (MM)</label>
+          <input type="text" size="2" data-stripe="month" id="month-field" required>
+        </fieldset>
+        <fieldset>
+          <label for="month-field">Year (YYYY)</label>
+          <input type="text" size="4" data-stripe="year" id="year-field" required>
+        </fieldset>
+        <fieldset>
+          <input name="submit" id="submitbtn" value="Submit Payment" class="first" type="submit">
+          <input name="reset" id="submitbtn" value="Reset" type="reset">
+        </fieldset>
+      </article>
+    </form>
+  </section>
+</div>
+
+<script src="subscribe.js"></script>
+</body>
+</html>
