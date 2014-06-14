@@ -297,10 +297,17 @@ a.btn-text:hover {
 	display: block;
 	margin: 0 auto;
 }
-.product-box p {
+.product-box p, .product-box li {
 	color: #fff;
 	font-size: 15px;
 	line-height: 24px;
+}
+.product-box ul {
+  margin-top: 0.5em;
+}
+.product-box li {
+  margin-left: 2em;
+  list-style-type: lower-roman;
 }
 .product-box h3 {
 	color: #fff;
