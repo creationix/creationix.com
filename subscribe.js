@@ -37,8 +37,8 @@ window.onload = function () {
       plans[name].cell.setAttribute("class", className);
       plans[name].label.textContent = label;
     });
-    // if (plan) {
-      // document.getElementById("number-field").focus();
-    // }
+    if (plan) {
+      document.getElementById('submitbtn').value = "Subscribe for $" + plans[plan].price + "/month";
+    }
   }
 };
