@@ -81,13 +81,13 @@ window.onload = function () {
           card: response.card
         });
         // if (window.confirm("GO?")) {
-        //   appendField("stripeToken", response.id);
-        //   appendField("card", JSON.stringify(response.card));
-        //   if (response.livemode) appendField("livemode", response.livemode);
-        //   form.submit();
+          appendField("stripeToken", response.id);
+          appendField("card", JSON.stringify(response.card));
+          if (response.livemode) appendField("livemode", response.livemode);
+          form.submit();
         // }
         // else {
-          submit.removeAttribute("disabled");
+        //   submit.removeAttribute("disabled");
         // }
         return;
       }
