@@ -91,6 +91,7 @@ input.first                                                 { margin-left:30%; }
 input[type="button"]                                        { color:#FFF; border-color:#000; background-color:#000; transition:all .3s linear 0s; -moz-transition:all .3s linear 0s; -webkit-transition:all .3s linear 0s; -o-transition:all .3s linear 0s; }
 input[type="submit"]                                        { color:#FFF; border-color:#2ECC71; background-color:#2ECC71; transition:all .3s linear 0s; -moz-transition:all .3s linear 0s; -webkit-transition:all .3s linear 0s; -o-transition:all .3s linear 0s; }
 input[type="reset"]                                         { color:#999; border-color:#CCC; background-color:#FFF; transition:all .3s linear 0s; -moz-transition:all .3s linear 0s; -webkit-transition:all .3s linear 0s; -o-transition:all .3s linear 0s; }
+input[disabled]                                             { opacity: 0.3 };
 
 input:hover[type="button"]                                  { border-color:#CCC; background-color:#FFF; color:#333; }
 input:hover[type="submit"]                                  { border-color:#2ECC71; background-color:#25a35a; color:#FFF; }
