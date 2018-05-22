@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html ⚡>
+<head>
+    <meta charset="utf-8">
+
+    <title>Solar Powered Workstation</title>
+    <meta name="description" content="" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <link rel="canonical" href="http://creationix.com/solar-powered-workstation/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    
+    <meta property="og:site_name" content="Creationix Creations" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Solar Powered Workstation" />
+    <meta property="og:description" content="I few weeks ago I decided I would try my hand at a smaller-scale solar system than the one I did for my well (details in a future post). Overall, this system was well under $1000 and pretty easy to set up.  I&#x27;m not sure how practical it is since" />
+    <meta property="og:url" content="http://creationix.com/solar-powered-workstation/" />
+    <meta property="article:published_time" content="2016-12-03T02:38:21.000Z" />
+    <meta property="article:modified_time" content="2016-12-03T21:03:53.000Z" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Solar Powered Workstation" />
+    <meta name="twitter:description" content="I few weeks ago I decided I would try my hand at a smaller-scale solar system than the one I did for my well (details in a future post). Overall, this system was well under $1000 and pretty easy to set up.  I&#x27;m not sure how practical it is since" />
+    <meta name="twitter:url" content="http://creationix.com/solar-powered-workstation/" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Tim Caswell" />
+    <meta name="twitter:site" content="@creationix" />
+    <meta name="twitter:creator" content="@creationix" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Creationix Creations",
+        "logo": "http://creationix.com/content/images/2016/11/Logo_V2.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Tim Caswell",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://www.gravatar.com/avatar/c953ddd239707998340e1a6fbb3eeb46?s=250&d=mm&r=x",
+            "width": 250,
+            "height": 250
+        },
+        "url": "http://creationix.com/author/tim/",
+        "sameAs": [
+            "https://github.com/creationix/",
+            "https://twitter.com/creationix"
+        ]
+    },
+    "headline": "Solar Powered Workstation",
+    "url": "https://creationix.com/solar-powered-workstation/",
+    "datePublished": "2016-12-03T02:38:21.000Z",
+    "dateModified": "2016-12-03T21:03:53.000Z",
+    "description": "I few weeks ago I decided I would try my hand at a smaller-scale solar system than the one I did for my well (details in a future post). Overall, this system was well under $1000 and pretty easy to set up.  I&#x27;m not sure how practical it is since",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://creationix.com"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.11" />
+    <link rel="alternate" type="application/rss+xml" title="Creationix Creations" href="https://creationix.com/rss/" />
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,600,400" />
+    <style amp-custom>
+        /* ==========================================================================
+           Table of Contents
+           ========================================================================== */
+
+        /*
+
+            0. Normalize
+            1. General
+            2. Utilities
+            3. AMP Post
+            4. Footer
+
+        */
+
+        /* ==========================================================================
+           0. normalize.css v3.0.3 | MIT License | git.io/normalize | (minified)
+           ========================================================================== */
+
+        html {
+            font-family: sans-serif;
+
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+        body {
+            margin: 0;
+        }
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        main,
+        menu,
+        nav,
+        section,
+        summary {
+            display: block;
+        }
+        audio,
+        canvas,
+        progress,
+        video {
+            display: inline-block;
+            vertical-align: baseline;
+        }
+        audio:not([controls]) {
+            display: none;
+            height: 0;
+        }
+        [hidden],
+        template {
+            display: none;
+        }
+        a {
+            background-color: transparent;
+        }
+        a:active,
+        a:hover {
+            outline: 0;
+        }
+        abbr[title] {
+            border-bottom: 1px dotted;
+        }
+        b,
+        strong {
+            font-weight: bold;
+        }
+        dfn {
+            font-style: italic;
+        }
+        h1 {
+            margin: 0.67em 0;
+            font-size: 2em;
+        }
+        mark {
+            background: #ff0;
+            color: #000;
+        }
+        small {
+            font-size: 80%;
+        }
+        sub,
+        sup {
+            position: relative;
+            vertical-align: baseline;
+            font-size: 75%;
+            line-height: 0;
+        }
+        sup {
+            top: -0.5em;
+        }
+        sub {
+            bottom: -0.25em;
+        }
+        img {
+            border: 0;
+        }
+        amp-img {
+            border: 0;
+        }
+        svg:not(:root) {
+            overflow: hidden;
+        }
+        figure {
+            margin: 1em 40px;
+        }
+        hr {
+            box-sizing: content-box;
+            height: 0;
+        }
+        pre {
+            overflow: auto;
+        }
+        code,
+        kbd,
+        pre,
+        samp {
+            font-family: monospace, monospace;
+            font-size: 1em;
+        }
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            margin: 0;
+            color: inherit;
+            font: inherit;
+        }
+        button {
+            overflow: visible;
+        }
+        button,
+        select {
+            text-transform: none;
+        }
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"] {
+            cursor: pointer;
+
+            -webkit-appearance: button;
+        }
+        button[disabled],
+        html input[disabled] {
+            cursor: default;
+        }
+        button::-moz-focus-inner,
+        input::-moz-focus-inner {
+            padding: 0;
+            border: 0;
+        }
+        input {
+            line-height: normal;
+        }
+        input[type="checkbox"],
+        input[type="radio"] {
+            box-sizing: border-box;
+            padding: 0;
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            height: auto;
+        }
+        input[type="search"] {
+            -webkit-appearance: textfield;
+        }
+        input[type="search"]::-webkit-search-cancel-button,
+        input[type="search"]::-webkit-search-decoration {
+            -webkit-appearance: none;
+        }
+        fieldset {
+            margin: 0 2px;
+            padding: 0.35em 0.625em 0.75em;
+            border: 1px solid #c0c0c0;
+        }
+        legend {
+            padding: 0;
+            border: 0;
+        }
+        textarea {
+            overflow: auto;
+        }
+        optgroup {
+            font-weight: bold;
+        }
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+        td,
+        th {
+            padding: 0;
+        }
+
+
+        /* ==========================================================================
+           1. General - Setting up some base styles
+           ========================================================================== */
+
+        html {
+            max-height: 100%;
+            height: 100%;
+            font-size: 62.5%;
+
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+        body {
+            max-height: 100%;
+            height: 100%;
+            color: #3a4145;
+            background: #f4f8fb;
+            letter-spacing: 0.01rem;
+            font-family: "Merriweather", serif;
+            font-size: 1.8rem;
+            line-height: 1.75em;
+            text-rendering: geometricPrecision;
+
+            -webkit-font-feature-settings: "kern" 1;
+            -moz-font-feature-settings: "kern" 1;
+            -o-font-feature-settings: "kern" 1;
+        }
+
+        ::-moz-selection {
+            background: #d6edff;
+        }
+
+        ::selection {
+            background: #d6edff;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0 0 0.3em 0;
+            color: #2e2e2e;
+            font-family: "Open Sans", sans-serif;
+            line-height: 1.15em;
+            text-rendering: geometricPrecision;
+
+            -webkit-font-feature-settings: "dlig" 1, "liga" 1, "lnum" 1, "kern" 1;
+            -moz-font-feature-settings: "dlig" 1, "liga" 1, "lnum" 1, "kern" 1;
+            -o-font-feature-settings: "dlig" 1, "liga" 1, "lnum" 1, "kern" 1;
+        }
+
+        h1 {
+            text-indent: -2px;
+            letter-spacing: -1px;
+            font-size: 2.6rem;
+        }
+
+        h2 {
+            letter-spacing: 0;
+            font-size: 2.4rem;
+        }
+
+        h3 {
+            letter-spacing: -0.6px;
+            font-size: 2.1rem;
+        }
+
+        h4 {
+            font-size: 1.9rem;
+        }
+
+        h5 {
+            font-size: 1.8rem;
+        }
+
+        h6 {
+            font-size: 1.8rem;
+        }
+
+        a {
+            color: #4a4a4a;
+        }
+
+        a:hover {
+            color: #111;
+        }
+
+        p,
+        ul,
+        ol,
+        dl {
+            margin: 0 0 2.5rem 0;
+            font-size: 1.5rem;
+            text-rendering: geometricPrecision;
+
+            -webkit-font-feature-settings: "liga" 1, "onum" 1, "kern" 1;
+            -moz-font-feature-settings: "liga" 1, "onum" 1, "kern" 1;
+            -o-font-feature-settings: "liga" 1, "onum" 1, "kern" 1;
+        }
+
+        ol,
+        ul {
+            padding-left: 2em;
+        }
+
+        ol ol,
+        ul ul,
+        ul ol,
+        ol ul {
+            margin: 0 0 0.4em 0;
+            padding-left: 2em;
+        }
+
+        dl dt {
+            float: left;
+            clear: left;
+            overflow: hidden;
+            margin-bottom: 1em;
+            width: 180px;
+            text-align: right;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-weight: 700;
+        }
+
+        dl dd {
+            margin-bottom: 1em;
+            margin-left: 200px;
+        }
+
+        li {
+            margin: 0.4em 0;
+        }
+
+        li li {
+            margin: 0;
+        }
+
+        hr {
+            display: block;
+            margin: 1.75em 0;
+            padding: 0;
+            height: 1px;
+            border: 0;
+            border-top: #efefef 1px solid;
+        }
+
+        blockquote {
+            box-sizing: border-box;
+            margin: 1.75em 0 1.75em 0;
+            padding: 0 0 0 1.75em;
+            border-left: #4a4a4a 0.4em solid;
+
+            -moz-box-sizing: border-box;
+        }
+
+        blockquote p {
+            margin: 0.8em 0;
+            font-style: italic;
+        }
+
+        blockquote small {
+            display: inline-block;
+            margin: 0.8em 0 0.8em 1.5em;
+            color: #ccc;
+            font-size: 0.9em;
+        }
+
+        blockquote small:before {
+            content: "\2014 \00A0";
+        }
+
+        blockquote cite {
+            font-weight: 700;
+        }
+
+        blockquote cite a {
+            font-weight: normal;
+        }
+
+        mark {
+            background-color: #fdffb6;
+        }
+
+        code,
+        tt {
+            padding: 1px 3px;
+            border: #e3edf3 1px solid;
+            background: #f7fafb;
+            border-radius: 2px;
+            white-space: pre-wrap;
+            font-family: Inconsolata, monospace, sans-serif;
+            font-size: 0.85em;
+            font-feature-settings: "liga" 0;
+
+            -webkit-font-feature-settings: "liga" 0;
+            -moz-font-feature-settings: "liga" 0;
+        }
+
+        pre {
+            overflow: auto;
+            box-sizing: border-box;
+            margin: 0 0 1.75em 0;
+            padding: 10px;
+            width: 100%;
+            border: #e3edf3 1px solid;
+            background: #f7fafb;
+            border-radius: 3px;
+            white-space: pre;
+            font-family: Inconsolata, monospace, sans-serif;
+            font-size: 0.9em;
+
+            -moz-box-sizing: border-box;
+        }
+
+        pre code,
+        pre tt {
+            padding: 0;
+            border: none;
+            background: transparent;
+            white-space: pre-wrap;
+            font-size: inherit;
+        }
+
+        kbd {
+            display: inline-block;
+            margin-bottom: 0.4em;
+            padding: 1px 8px;
+            border: #ccc 1px solid;
+            background: #f4f4f4;
+            border-radius: 4px;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2),
+            0 1px 0 0 #fff inset;
+            color: #666;
+            text-shadow: #fff 0 1px 0;
+            font-size: 0.9em;
+            font-weight: 700;
+        }
+
+        table {
+            box-sizing: border-box;
+            margin: 1.75em 0;
+            max-width: 100%;
+            width: 100%;
+            background-color: transparent;
+
+            -moz-box-sizing: border-box;
+        }
+
+        table th,
+        table td {
+            padding: 8px;
+            border-top: #efefef 1px solid;
+            vertical-align: top;
+            text-align: left;
+            line-height: 20px;
+        }
+
+        table th {
+            color: #000;
+        }
+
+        table caption + thead tr:first-child th,
+        table caption + thead tr:first-child td,
+        table colgroup + thead tr:first-child th,
+        table colgroup + thead tr:first-child td,
+        table thead:first-child tr:first-child th,
+        table thead:first-child tr:first-child td {
+            border-top: 0;
+        }
+
+        table tbody + tbody {
+            border-top: #efefef 2px solid;
+        }
+
+        table table table {
+            background-color: #fff;
+        }
+
+        table tbody > tr:nth-child(odd) > td,
+        table tbody > tr:nth-child(odd) > th {
+            background-color: #f6f6f6;
+        }
+
+        table.plain tbody > tr:nth-child(odd) > td,
+        table.plain tbody > tr:nth-child(odd) > th {
+            background: transparent;
+        }
+
+        iframe,
+        amp-iframe,
+        .fluid-width-video-wrapper {
+            display: block;
+            margin: 1.75em 0;
+        }
+
+        /* When a video is inside the fitvids wrapper, drop the
+        margin on the iframe, cause it breaks stuff. */
+        .fluid-width-video-wrapper iframe,
+        .fluid-width-video-wrapper amp-iframe {
+            margin: 0;
+        }
+
+        textarea,
+        select,
+        input {
+            margin: 0 0 5px 0;
+            padding: 6px 9px;
+            width: 260px;
+            outline: 0;
+            border: #e7eef2 1px solid;
+            background: #fff;
+            border-radius: 4px;
+            box-shadow: none;
+            font-family: "Open Sans", sans-serif;
+            font-size: 1.6rem;
+            line-height: 1.4em;
+            font-weight: 100;
+
+            -webkit-appearance: none;
+        }
+
+        textarea {
+            min-width: 250px;
+            min-height: 80px;
+            max-width: 340px;
+            width: 100%;
+            height: auto;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="number"]:focus,
+        input[type="date"]:focus,
+        input[type="month"]:focus,
+        input[type="week"]:focus,
+        input[type="time"]:focus,
+        input[type="datetime"]:focus,
+        input[type="datetime-local"]:focus,
+        textarea:focus {
+            outline: none;
+            outline-width: 0;
+            border: #bbc7cc 1px solid;
+            background: #fff;
+        }
+
+        select {
+            width: 270px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        /* ==========================================================================
+           2. Utilities
+           ========================================================================== */
+
+        /* Clears shit */
+        .clearfix:before,
+        .clearfix:after {
+            content: " ";
+            display: table;
+        }
+        .clearfix:after {
+            clear: both;
+        }
+        .clearfix {
+            zoom: 1;
+        }
+
+        /* ==========================================================================
+           3. AMP Post
+           ========================================================================== */
+
+
+
+        .main-header {
+            position: relative;
+            display: table;
+            overflow: hidden;
+            box-sizing: border-box;
+            width: 100%;
+            height: 50px;
+            background: #5ba4e5 no-repeat center center;
+            background-size: cover;
+            text-align: left;
+
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+        .content {
+            background: #fff;
+            padding-top: 15px;
+        }
+        .blog-title,
+        .content {
+            margin: auto;
+            max-width: 600px;
+        }
+
+        .blog-title a {
+            display: block;
+            padding-right: 16px;
+            padding-left: 16px;
+            height: 50px;
+            color: #fff;
+            text-decoration: none;
+            font-family: "Open Sans", sans-serif;
+            font-size: 16px;
+            line-height: 50px;
+            font-weight: 600;
+        }
+
+        .post {
+            position: relative;
+            margin-top: 0;
+            margin-right: 16px;
+            margin-left: 16px;
+            padding-bottom: 0;
+            max-width: 100%;
+            border-bottom: #ebf2f6 1px solid;
+            word-wrap: break-word;
+            font-size: 0.95em;
+            line-height: 1.65em;
+        }
+
+        .post-header {
+            margin-bottom: 1rem;
+        }
+
+        .post-title {
+            margin-bottom: 0;
+        }
+
+        .post-title a {
+            text-decoration: none;
+        }
+
+        .post-meta {
+            display: block;
+            margin: 3px 0 0 0;
+            color: #9eabb3;
+            font-family: "Open Sans", sans-serif;
+            font-size: 1.3rem;
+            line-height: 2.2rem;
+        }
+
+        .post-meta a {
+            color: #9eabb3;
+            text-decoration: none;
+        }
+
+        .post-meta a:hover {
+            text-decoration: underline;
+        }
+
+        .post-meta .author {
+            margin: 0;
+            font-size: 1.3rem;
+            line-height: 1.3em;
+        }
+
+        .post-date {
+            display: inline-block;
+            text-transform: uppercase;
+            white-space: nowrap;
+            font-size: 1.2rem;
+            line-height: 1.2em;
+        }
+
+        .post-image {
+            margin: 0;
+            padding-top: 3rem;
+            padding-bottom: 30px;
+            border-top: 1px #E8E8E8 solid;
+        }
+
+        /* Keep images centered, and allow images wider than the main
+           text column to break out. */
+        .post-content amp-img,
+        .post-content amp-anim {
+            /* Centers an image by (1) pushing its left edge to the
+               center of its container and (2) shifting the entire image
+               in the opposite direction by half its own width.
+               Works for images that are larger than their containers. */
+            position: relative;
+            left: 50%;
+            display: block;
+            padding: 0;
+            min-width: 0;
+            max-width: 112%; /* fallback when calc doesn't work */
+            width: calc(100% + 32px); /* expand with to image + margins */
+            height: auto;
+            transform: translateX(-50%);
+
+            -webkit-transform: translateX(-50%); /* for Safari and iOS */
+            -ms-transform: translateX(-50%); /* for IE9 */
+        }
+
+        .footnotes {
+            font-size: 1.3rem;
+            line-height: 1.6em;
+            font-style: italic;
+        }
+
+        .footnotes li {
+            margin: 0.6rem 0;
+        }
+
+        .footnotes p {
+            margin: 0;
+        }
+
+        .footnotes p a:last-child {
+            text-decoration: none;
+        }
+
+        /* ==========================================================================
+           4. Footer - The bottom the AMP Post
+           ========================================================================== */
+
+        .site-footer {
+            position: relative;
+            margin: 0 auto 20px auto;
+            padding: 1rem 15px;
+            max-width: 600px;
+            color: rgba(0,0,0,0.5);
+            font-family: "Open Sans", sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.75em;
+        }
+
+        .site-footer a {
+            color: rgba(0,0,0,0.5);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .site-footer a:hover {
+            border-bottom: #bbc7cc 1px solid;
+        }
+
+        .poweredby {
+            display: block;
+            float: right;
+            width: 45%;
+            text-align: right;
+        }
+
+        .copyright {
+            display: block;
+            float: left;
+            width: 45%;
+        }
+    </style>
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    
+
+</head>
+
+<body class="amp-template">
+    <header class="main-header">
+        <nav class="blog-title">
+            <a href="http://creationix.com">Creationix Creations</a>
+        </nav>
+    </header>
+
+    <main class="content" role="main">
+        <article class="post">
+
+            <header class="post-header">
+                <h1 class="post-title">Solar Powered Workstation</h1>
+                <section class="post-meta">
+                    <p class="author">by <a href="/author/tim/">Tim Caswell</a></p>
+                    <time class="post-date" datetime="2016-12-02">2016-12-02</time>
+                </section>
+            </header>
+            <section class="post-content">
+
+                <p>I few weeks ago I decided I would try my hand at a smaller-scale solar system than the one I did for my well (details in a future post).</p>
+
+<p></p>
+
+<p>Overall, this system was well under $1000 and pretty easy to set up.  I'm not sure how practical it is since off-grid systems always cost more than the electricity you save and in a natural disaster situation, I'm not sure powering my work laptop will be top priority for me.</p>
+
+<p>What it does do for me is three things.</p>
+
+<ol>
+<li>My workstation is immune to power flickers.  I'm often in meetings with coworkers when power goes out.  This way I can continue working without worrying about losing power.  </li>
+<li>It's great practice for building larger systems.  Many readers of this post are in a position to build one themselves to get started creating their own off-grid solar systems.  </li>
+<li>In a disaster situation, I can use it to charge cell phones, flashlights, fans, etc.  Anything small, but essential can be powered.</li>
+</ol>
+
+<h2 id="choseyourvoltage">Chose your Voltage</h2>
+
+<p>When designing a solar system, you need to decide what DC voltage your system will run at.  This is typically 12v, 24v or 48v.  The most common batteries are large deep-cycle lead-acid batteries (look just like car batteries) and they typically come in 12v configurations.</p>
+
+<p>If you're not interested in the juicy details of why I chose 12v, skip to the next section and go with 12v.  It's good for a small budget-friendly system.</p>
+
+<p>Solar panels, like most DC generating devices, let you choose the volt-to-amp ratio depending on the resistance applied (see <a href="https://en.wikipedia.org/wiki/Ohm's_law">Ohm's Law</a>).  The data sheet will have an optional voltage for maximum efficiency and lifetime.  When a panel says its nominal wattage is 150w that means that in ideal conditions it can produce 150w of power.  These particular panels like to run at 12v which means <code>150w / 12v</code> or about 12.5 amps.</p>
+
+<p>The higher the voltage in a system, the better insulators you need.  High-voltage backbone lines that carry power across the country, for example, can carry hundreds of thousands of volts and will create lightning-like arcs if you get too close.  That's why the power-lines are so high.  Wall power in your house is typically between 120v and 240v (AC) depending on what outlet and where you live.  Power cords for these have a fairly healthy rubber insulation.  But in your laptop power-cord, for example, you'll notice that the part after the brick is <em>much</em> smaller.  This is because it's a lower voltage somewhere between 5v and 30v for most electronics.  When dealing with 12v systems, just a couple layers of electrical tape is enough to insulate things.</p>
+
+<p>There are two main problems with low voltages though.  </p>
+
+<p>First, as Tesla liked to point out, low voltage DC currents drop voltage very quickly over distance.  The 20 feet or so of wire between my panel and controller is significant enough to cause real losses.  Higher voltage systems with the same overall wattage lose less power over the same distance.</p>
+
+<p>Second, low voltage systems will have high currents with fixed power.  For only 300w in this system it's not a big deal, but for my well system that powers a 0.5hp well pump, it was a real issue.</p>
+
+<p>The higher the current, the thicker the <a href="https://en.wikipedia.org/wiki/American_wire_gauge">metal wire you need</a> or it will overheat, causing massive losses and possible fires.  Copper isn't that cheap.  Also, small charge-controllers typically don't want more than 30amps of input power so you're limited to 360w for your total system if you go with 12v and a small 30amp controller. (This system was 300w so it was well within that).</p>
+
+<p>The main problem with higher voltage systems is they can be more complex and often cost more.  For example, if I wanted to build a 48v system out of 12v panels and 12v batteries I would need to get them in multiples of 4 so I can wire 4 batteries and 4 panels in series to add up to the 48 volts. (Remember wire in series adds up voltage, wire in parallel adds up current).</p>
+
+<p>Also, charge-controllers and inverters that support the higher voltages tend to cost more since they are designed for larger systems.</p>
+
+<p>On my well pump system, I had to go with at least 24v because of the 800w inputs and the 15,000w max pull from the giant inverter. (Honestly, 24v with giant 00 wires still isn't enough, but I never max out the inverter so it's fine.)</p>
+
+<p>This was a small system not needing more than 300w of solar input so I saved money going with a 12v system. </p>
+
+<h2 id="thepanels">The Panels</h2>
+
+<p><a href="https://www.amazon.com/gp/product/B00KI14U5C/ref=as_li_ss_il?ie=UTF8&amp;th=1&amp;linkCode=li3&amp;tag=creationix0e-20&amp;linkId=6adccefed8d781f81a7f798eba408704" target="_blank"></a> <br></br>
+Alright, enough theory, let's get building.</p>
+
+<p>The most visible part of a solar system externally is the panels.  I decided to go with the Renogy brand I used before on the well system, but decided to go with larger panels since they were slightly cheaper per watt and I could wire fewer panels to get the same wattage.  </p>
+
+<p>The workshop/office/bikeshed I built (future article with details) has a large south-facing metal roof.  It's pretty trivial to bolt solar panels on top.  Here in the northern hemisphere, the sun is always towards the south.  Another placement option is west-facing to get the afternoon sun, especially in grid-tie systems that need more power in the evenings.</p>
+
+<p><a href="https://www.amazon.com/Renogy-Solar-Panel-Mounting-Bracket/dp/B00W49ZPPK/ref=as_li_ss_il?_encoding=UTF8&amp;pd_rd_i=B00W49ZPPK&amp;pd_rd_r=YZFSKSGXX06JF4H6PXG1&amp;pd_rd_w=UWu7X&amp;pd_rd_wg=0dSbM&amp;refRID=YZFSKSGXX06JF4H6PXG1&amp;th=1&amp;linkCode=li3&amp;tag=creationix0e-20&amp;linkId=2daa493c656933b7805317041440a99e" target="_blank"></a>You want your panels to get maximum direct sunlight, without shadows.  A shadow on the edge of the panel reduces the power of the entire panel, because every cell in the panel produces power equal to the weakest cell.  </p>
+
+<p>If you want to get really fancy you can get mounts that let you control the exact angle or even follow the sun.  I was lazy and just bolted them directly on the south facing roof panel.</p>
+
+<p>To install, first bolt on the <a href="http://amzn.to/2gVgtCq">mounting brackets</a> to each <a href="http://amzn.to/2gQvgj2">solar panel</a>.  This is best done with a <a href="http://amzn.to/2gvl69m">wrench set</a> since it's hex nut and bolt on both sides and the inner one is hard to reach. </p>
+
+<p>I got a 20' extendable ladder, lifted the panels by myself with screws in pocket and drill clipped to my belt. <br></br>
+I bolted them directly to the roof using the mounting brackets.  I did need to seal the holes a bit since the screws only had a rubber gasket on top and there was a chance water could get in under the brackets and leak into my ceiling.  Next time I'll try harder to get the rubber gasket in contact with the roof where it's needed.  (My wife would like to point out how much easier this might have been if I had gotten a helper...) <br></br>
+<a href="https://www.amazon.com/Renogy-CNCT-MC4Y-Branch-Connectors-connector/dp/B00Q5W30FY/ref=as_li_ss_il?ie=UTF8&amp;qid=1480701130&amp;sr=8-2&amp;keywords=renogy+mc4&amp;linkCode=li3&amp;tag=creationix0e-20&amp;linkId=efd7ec1b3f24c057bf0863240f7d2101" target="_blank"></a> <br></br>
+Since I had two panels, I wanted to wire in parallel.  The wires that come with the panel are pretty short, but putting them side-by-side with the mounting brackets overlapping, I was just able to join them in parallel using a pair of <a href="http://amzn.to/2gQBory">y connectors</a>.  The side with two connectors goes into both the positive or negative terminals of the two panels.  The single end will go to the wires heading towards the charge controller. See cabling section below for details.</p>
+
+<p><br></br></p>
+
+<h2 id="batteries">Batteries</h2>
+
+<p>Solar only works when there is direct sunlight and the amount it produces varies greatly.  You need to store all that power when it's at its peak so you can have it later.  Storage is the achilles heel of off-grid solar systems.  Battery tech hasn't advanced much in the last couple of decades.</p>
+
+<p></p>
+
+<p>The current best batteries for home solar storage are still plain old lead-acid; they use the same chemistry as engine starter batteries. It's cheap and fairly safe.  The major downside is it's not a dense chemistry.  This makes the batteries large and heavy.  That's not typically a problem for batteries hidden away in a garage or shed so they are used by anyone on any kind of a budget. </p>
+
+<p>You can get fancier chemistries but for <a href="https://ironedison.com/">10x to 50x the price</a>.  I tried to shop for <a href="https://www.tesla.com/powerwall">Tesla Powerwall</a>, but they never returned my calls.</p>
+
+<p>Make sure you get deep cycle batteries, not starter batteries.  They are optimized for very different workloads.  Car batteries are always full (thanks to the car's alternator constantly charging them) and have huge power draws at startup when you're trying to turn the engine.  Solar batteries have a slower and deeper cycle where they top off during a sunny day and then slowly drain the rest of the time.</p>
+
+<p><a href="https://www.amazon.com/gp/product/B00S1RT58C/ref=as_li_ss_il?ie=UTF8&amp;psc=1&amp;linkCode=li2&amp;tag=creationix0e-20&amp;linkId=56896623fa40811666e60f62927eb1eb" target="_blank"></a> <br></br>
+I don't recommend the batteries I got from Walmart in the photo above.  They drain very fast and don't appear to have their rated capacity.  For this project I recommend between 200 and 400 amp hours so that you can survive cloudy days.</p>
+
+<p>I do recommend <a href="http://amzn.to/2gPvkC7">these batteries</a> I got on Amazon for my well house system.  They work great and cost about the same as the WalMart special.  Get 2 or 4 of them and you should be good.</p>
+
+<p>When wiring the batteries, make sure to connect them in parallel with all positive terminals in red and negative in black.  The inverter and charge controller will also be connected in parallel the same way.  The goal is to treat the entire battery bank as a single huge battery.</p>
+
+<p><a href="https://www.amazon.com/dp/B00F59NKIU/ref=as_li_ss_il?_encoding=UTF8&amp;th=1&amp;linkCode=li3&amp;tag=creationix0e-20&amp;linkId=8e99179c82c14d4f88428954fee85d5e" target="_blank"></a> <br></br>
+As far as sizing the wires, they need to be large enough for either incoming currents or outgoing currents, whichever is larger.  For my well, outgoing was much larger and I used some spare cables from that project here.</p>
+
+<p>For this, I thought incoming would be larger since you're only charging about 5 hours a day, but are draining constantly.  The incoming has to be a higher rate right?</p>
+
+<p>Actually it turns out that laptops pull quite a surge when the CPU scales up doing things like compiling large projects. (More on that later in the Inverter section).</p>
+
+<p>Either way, I was safe since I reused my huge wires from the well. I recommend something like <a href="http://amzn.to/2gidBQl">these</a>.  You'll need 1 pair for 2 batteries and 3 pairs for 4 batteries.</p>
+
+<p><a href="https://www.amazon.com/Positive-Battery-Terminal-Copper-Marine/dp/B01N8VN27Q/ref=as_li_ss_il?ie=UTF8&amp;qid=1480798735&amp;sr=8-3&amp;keywords=fused+battery+wire&amp;linkCode=li3&amp;tag=creationix0e-20&amp;linkId=7bf956c14ce858237bfad17e711457ca" target="_blank"></a> <br></br>
+Speaking of saftey, <a href="https://twitter.com/simon_vetter/status/804980862337040384">Simon Vetter</a> reminded me that batteries can eventually fail (sooner if manufacturing had defects) causing internal shorts and possible thermal runaway (aka explosion).  You should probably have fuses on one side of the circuit using something like <a href="http://amzn.to/2fXiGwj">these cables</a> which have inline fuse slots.</p>
+
+<p>In my setup I have a fuse going to the inverter because I'm reusing cables that came with a different inverter that had the fuse built-in. </p>
+
+<h2 id="chargecontroller">Charge Controller</h2>
+
+<p>There are two main DC circuits in a solar system as far as cabling is concerned.  One is the circuit coming in from solar panels to the batteries through the charge controller.  The wires need to be large enough to handle the max current coming from the panels.  </p>
+
+<p><a href="https://www.amazon.com/Adaptor-connectors-Connecting-controller-Renogy/dp/B00GF8UUJM/ref=as_li_ss_il?s=lawn-garden&amp;ie=UTF8&amp;qid=1480712630&amp;sr=1-2-spell&amp;keywords=renocy+cables&amp;th=1&amp;linkCode=li2&amp;tag=creationix0e-20&amp;linkId=847084fdab1fc6d245f4db53bcbe4753" target="_blank"></a> <br></br>
+If you went for the 300w at 12v system as I did, you need to be able to handle 12.5amps.  Looking at the <a href="https://en.wikipedia.org/wiki/American_wire_gauge">awg chart</a> it looks like we can get away with <a href="http://amzn.to/2gw6fLZ">12awg cables</a> coming from the Solar panel.  Make sure to get the ones with MC4 connectors on the solar side and bare wires on the other end to insert into the charge controller. <br></br>
+<a href="https://www.amazon.com/gp/product/B00FPSBOX4/ref=as_li_ss_il?ie=UTF8&amp;th=1&amp;linkCode=li3&amp;tag=creationix0e-20&amp;linkId=dec787de515da13273540da9fe4ca073" target="_blank"></a> <br></br>
+Then from charge controller to battery get the same thing, but with ring terminals as they tend to be easy to hook to batteries.</p>
+
+<p>The job of a charge controller is to look at the current condition of the battery bank and the power coming off the solar panels and use smart algorithms to decide the perfect ratio of volts to amps to charge the battery efficiently and safely. <br></br>
+<a href="https://www.amazon.com/Renogy-Adventurer-Charge-Controller-Display/dp/B015DDVDQS/ref=as_li_ss_il?ie=UTF8&amp;qid=1480715088&amp;sr=8-3&amp;keywords=renogy+charge+controller&amp;linkCode=li3&amp;tag=creationix0e-20&amp;linkId=b2caed35b6c0434fa8fe2c9ab31d196b" target="_blank"></a> <br></br>
+For this project I recommend either the <a href="http://amzn.to/2gidRPc">Renogy Wanderer</a> or the <a href="http://amzn.to/2gWqgYZ">Renogy Adventurer</a>.  Both are PWM-style controllers that can handle up to 30amps of input.  The main difference is the Wanderer is cheaper, but the Adventurer has a display built in and comes with a battery temperature sensor to aid its algorithms for optimal charging.</p>
+
+<p>I bought the cheaper one, but later regretted it because I love having all those displays to see what's going on in my system. <br></br>
+<a href="https://www.amazon.com/gp/product/B013PKYILS/ref=as_li_ss_il?ie=UTF8&amp;th=1&amp;linkCode=li3&amp;tag=creationix0e-20&amp;linkId=05032e485874e3279a55a37a05ad677e" target="_blank"></a> <br></br>
+I ended up buying an <a href="http://amzn.to/2gWgGVS">external multimeter</a> and wiring it to the incoming lines so I could see how much power was coming off my solar panels at any given time.  These can be somewhat tricky to wire up and only show what's going into the controller.  I can't see my battery level other than a red indicator LED on the controller when it's low. <br></br>
+<br></br></p>
+
+<p></p>
+
+<h2 id="usingthepower">Using the Power</h2>
+
+<p>Now that we have panels, batteries, and a charge controller all cabled together, we want to use that power, right?</p>
+
+<p><a href="https://www.amazon.com/NOCO-GC018-Socket-Eyelet-Terminal/dp/B00G8WLW2Y/ref=as_li_ss_il?_encoding=UTF8&amp;pd_rd_i=B00G8WLW2Y&amp;pd_rd_r=ZYEP8ZNZ7FW9Y80T93SQ&amp;pd_rd_w=4e8E4&amp;pd_rd_wg=XtCBw&amp;psc=1&amp;refRID=ZYEP8ZNZ7FW9Y80T93SQ&amp;linkCode=li3&amp;tag=creationix0e-20&amp;linkId=c672c204cef180b1a9c1a82f6a06a360" target="_blank"></a> <br></br>
+The best thing to do is find appliances that consume 12v DC current (typically made for vehicles and RVs) and wire them directly to the batteries.  You can also use a simple wire-to-socket kit like <a href="http://amzn.to/2fUyPCB">this</a> to expose the batteries like the plug in a car.  There is a whole ecosystem of things that use this port (including phone chargers).</p>
+
+<p>But if you want to power monitors, laptops, and other larger devices that only come with 120v AC cords, you need an inverter.  An inverter contains electronics and transformers to convert 12v/24v/48v DC to 120v/240v AC depending on the model.</p>
+
+<p><a href="https://www.amazon.com/gp/product/B00F4TP3AE/ref=as_li_ss_il?ie=UTF8&amp;psc=1&amp;linkCode=li3&amp;tag=creationix0e-20&amp;linkId=511208ea35c03efe92841e23e6495fd1" target="_blank"></a> <br></br>
+I first got a 1000w inverter.  Make sure to get one with pure sine wave output if you're powering anything sensitive or with a motor/compressor.</p>
+
+<p>This worked great and ran my laptop, monitor, cluster of raspberry PIs, and secondary desktop with its own monitor.  The fan never even kicked in.  The main problem was that it had a fairly high idle draw; when it wasn't being used, but was simply turned on providing AC power, it wasted a significant amount of energy.</p>
+
+<p><a href="https://www.amazon.com/gp/product/B00F4TBW6S/ref=as_li_ss_il?ie=UTF8&amp;psc=1&amp;linkCode=li3&amp;tag=creationix0e-20&amp;linkId=1c7451ef43c267207439f2426f6749bf" target="_blank"></a> <br></br>
+So I ordered the smaller, 300w version of this inverter. Surely I don't need more than that for my small electronics.</p>
+
+<p>The idle draw was significantly lower and my battery lasted longer with the inverter turned on, but since my load was closer to its capacity the fan would kick on every time my laptop started maxing out a CPU.  It was loud enough to interfere with my meetings and generally drove me crazy.</p>
+
+<p>My compromise was to keep both on my desk and turn them off manually when I left work for the day. Works great!  You can see my macbook and monitor plugged directly into the larger inverter.  The smaller inverter powers my speakers.</p>
+
+<p></p>
+
+<h2 id="backupcharger">Backup Charger</h2>
+
+<p><a href="https://www.amazon.com/Schumacher-SC-1200A-CA-SpeedCharge-Automatic-Battery/dp/B000BQSIWK/ref=as_li_ss_il?ie=UTF8&amp;qid=1480717360&amp;sr=8-2&amp;keywords=car+battery+charger&amp;linkCode=li3&amp;tag=creationix0e-20&amp;linkId=9706a22bd13b8040c894d3640f0d2abe" target="_blank"></a> <br></br>
+While I was testing out this system, I kept a normal car battery charger handy.  Originally I had only one solar panel and several days of clouds.  Combine this with the crappy WalMart batteries leaving the large inverter on all night, and they were constantly going dead.  The charger could get me up and going quickly while I still had grid power.</p>
+
+<p><a href="https://www.amazon.com/Power-PICOGLF10W12V120V-Inverter-Charger-Listed/dp/B00JGBMBD8/ref=as_li_ss_il?s=automotive&amp;ie=UTF8&amp;qid=1480717742&amp;sr=1-3&amp;keywords=aims+12v+pure+sine+wave+inverter+charger&amp;linkCode=li3&amp;tag=creationix0e-20&amp;linkId=616b194eeeea08988a2bcb9cfce1e9ff" target="_blank"></a> <br></br>
+If I had more money to blow on this project I would get a combined inverter-charger like I did for the well.  They are basically giant UPS systems but you have to provide your own batteries.  They charge the batteries automatically when they are low and pull from the batteries when they have plenty of charge.  If you lose grid power, they instantly switch over to battery.  It's pretty nice, but costs a lot more.  Also, they tend to come in large sizes with heavy idle draws.</p>
+
+<h2 id="shoppinglist">Shopping List</h2>
+
+<p>Listed here is the recommended setup I would use if I were to do this again from scratch.</p>
+
+<ul>
+<li>2x <a href="http://amzn.to/2gioaCG">150w 12v Renogy Solar Panels</a></li>
+<li>2x <a href="http://amzn.to/2gwl54W">Sets of Renogy Z Brackets</a></li>
+<li>1x <a href="http://amzn.to/2fUslUn">Renogy Adventurer Charge Controller</a></li>
+<li>1x <a href="http://amzn.to/2gPRKmR">Pair of MC4 Y-Connectors</a></li>
+<li>1x <a href="http://amzn.to/2h3EQSq">Pair of MC4 to plain cables</a></li>
+<li>1x <a href="http://amzn.to/2gPSlow">Pair of Ring to plain cables</a></li>
+<li>3x <a href="http://amzn.to/2gPPUlZ">12&quot; 4awg Battery Cable Pairs</a></li>
+<li>4x <a href="http://amzn.to/2gPOMi2">100AH sealed lead acid batteries</a></li>
+<li>1x <a href="http://amzn.to/2girJc5">1000w 12v Pure Sine Wave Inverter</a></li>
+</ul>
+
+<p>Today with prime pricing, I can purchase this entire set for <strong>$1,077.94</strong>.</p>
+
+<p>I've always said that complete solar systems cost about $3/watt.  This system has a slightly higher battery to solar ratio than I typically do, but we still come out pretty close to that.  This is a 300w system with ample storage, high-quality parts, and right at $1k.</p>
+
+<p>I'm assuming you already have basic mechanical and electrical tools.  If not, I recommend getting a <a href="http://amzn.to/2giurOI">crimper tool</a> and some <a href="http://amzn.to/2h3Hbga">wrenches</a>.</p>
+
+<p>Let me know if you decide to spring for it.  Think of it as investing in the knowledge of how to build off grid systems without first needing a second mortgage. Getting my current house entirely off-grid would cost about $300,000!  Not going to happen.  </p>
+
+<p>Some day I hope to either fix up my current house to consume a fraction of its current electricity and then take it off grid.  That or I'll just build a new one with high efficiency in the core design.  You can be sure I'll write about it all along.</p>
+
+<p>Happy Making!</p>
+
+            </section>
+
+        </article>
+    </main>
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="http://creationix.com">Creationix Creations</a> &copy; 2017</section>
+        <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+    </footer>
+</body>
+</html>
