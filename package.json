@@ -1,0 +1,11 @@
+{
+  "name": "creationix.com",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node serve.js",
+    "test": "node --test"
+  }
+}

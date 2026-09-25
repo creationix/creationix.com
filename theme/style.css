@@ -1,0 +1,90 @@
+/* Tweak the look from these variables first. */
+:root {
+  --bg: #fdfcf8;
+  --fg: #22211d;
+  --muted: #6b675c;
+  --accent: #2f6b3b;
+  --rule: #e4e0d4;
+  --code-bg: #f1eee4;
+  --measure: 40rem;
+  --serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #181a17;
+    --fg: #e6e3da;
+    --muted: #a19d91;
+    --accent: #8cc79a;
+    --rule: #33362f;
+    --code-bg: #242720;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  margin: 0 auto;
+  max-width: calc(var(--measure) + 2rem);
+  padding: 0 1rem;
+  background: var(--bg);
+  color: var(--fg);
+  font: 1.125rem/1.65 var(--serif);
+  overflow-wrap: break-word;
+}
+
+a { color: var(--accent); text-underline-offset: 0.15em; }
+a:hover { text-decoration-thickness: 2px; }
+
+header.site {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1.25rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--sans);
+}
+.brand { font-weight: 700; font-size: 1.1rem; color: var(--fg); text-decoration: none; }
+header.site nav { display: flex; flex-wrap: wrap; gap: 1rem; font-size: 0.95rem; }
+header.site nav a { color: var(--muted); text-decoration: none; }
+header.site nav a:hover, header.site nav a[aria-current] { color: var(--fg); }
+
+main { padding: 2rem 0 3rem; }
+footer.site {
+  padding: 1.5rem 0 2.5rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font: 0.85rem var(--sans);
+}
+
+h1, h2, h3, h4 { font-family: var(--sans); line-height: 1.25; margin: 2em 0 0.6em; }
+h1 { font-size: 2.1rem; margin-top: 0; letter-spacing: -0.01em; }
+h2 { font-size: 1.45rem; }
+h3 { font-size: 1.15rem; }
+article > header { margin-bottom: 2rem; }
+.meta { margin: 0.25rem 0 0; color: var(--muted); font: 0.9rem var(--sans); }
+
+img, video, iframe { max-width: 100%; height: auto; }
+figure { margin: 2rem 0; }
+figure img { display: block; margin: 0 auto; border-radius: 4px; }
+figcaption { margin-top: 0.5rem; text-align: center; color: var(--muted); font: 0.85rem var(--sans); }
+
+blockquote { margin: 1.5rem 0; padding-left: 1rem; border-left: 3px solid var(--rule); color: var(--muted); }
+hr { margin: 2.5rem 0; border: 0; border-top: 1px solid var(--rule); }
+code, pre { font-family: var(--mono); font-size: 0.85em; background: var(--code-bg); border-radius: 4px; }
+code { padding: 0.1em 0.3em; }
+pre { padding: 1rem; overflow-x: auto; line-height: 1.45; }
+pre code { padding: 0; background: none; font-size: inherit; }
+table { width: 100%; border-collapse: collapse; font-size: 0.95em; }
+th, td { padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--rule); text-align: left; }
+
+ol.posts { list-style: none; margin: 0; padding: 0; }
+ol.posts li + li { margin-top: 2.5rem; }
+ol.posts h2 { margin: 0; font-size: 1.35rem; }
+ol.posts h2 a { color: var(--fg); text-decoration: none; }
+ol.posts h2 a:hover { color: var(--accent); }
+ol.posts p:last-child { margin: 0.5rem 0 0; }
