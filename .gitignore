@@ -1,1 +1,7 @@
-.dat
+data/*
+!data/.gitkeep
+.cache/
+node_modules/
+.env
+__pycache__/
+*.py[cod]

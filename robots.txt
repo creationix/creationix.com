@@ -1,3 +1,0 @@
-User-agent: *
-Sitemap: http://creationix.com/sitemap.xml
-Disallow: /ghost/
