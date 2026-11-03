@@ -1,0 +1,5 @@
+{
+  "listen": "127.0.0.1:3000",
+  "limits": { "memory": "128mb", "cpu": "2s", "time": "15s" },
+  "sqlite": { "db": { "path": "data/site.db", "busyTimeout": "2s" } }
+}
